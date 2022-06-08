@@ -23,7 +23,7 @@ jobs:
         - name: refrence action 
           uses: ShivaKarki/action-terraform@v0.2
           with:
-             TF_TOKEN: ${{secrets.TF_TOKEN }}
+             TF_TOKEN: ${{env.TF_TOKEN }}
           
 
       
