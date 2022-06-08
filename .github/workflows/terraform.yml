@@ -9,7 +9,7 @@ jobs:
     
     steps:
       - name: reference terraform action
-        uses: ShivaKarki/terraform_action@v1.4
+        uses: ShivaKarki/terraform_action@v1.5
         
       
 
