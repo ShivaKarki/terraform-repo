@@ -9,9 +9,8 @@ jobs:
     
     steps:
       - name: reference terraform action
-        uses: ShivaKarki/terraform_action@v1.2
-        with:
-           TF_TOKEN: ${{ secrets.TF_TOKEN}}
+        uses: ShivaKarki/terraform_action@v1.3
+        
       
 
 
