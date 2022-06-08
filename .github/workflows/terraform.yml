@@ -11,7 +11,7 @@ jobs:
       - name: reference terraform action
         uses: ShivaKarki/terraform_action@v1.8
         with:
-            TF_TOKEN: ${{ secrets.TF_TOKEN}}
+            TF_TOKEN: ${{ secrets.TF_TOKEN }}
         
       
 
