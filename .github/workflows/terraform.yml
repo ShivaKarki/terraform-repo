@@ -5,20 +5,25 @@ on: [workflow_dispatch]
 jobs:    
      terraform-credentials-cloud:
        name: 'Terraform Cloud Credentials'
+       env:
+         TF_TOKEN: 'pI01CGKJrT5nIw.atlasv1.tFDFUypt0B8UAXdBu4NWkxx9nFR5lIIkFZ5vZ6HCAIxjD66plNNB7M9GemXPMJlFjDQ'
+         ARM_CLIENT_ID: ${{ secrets.AZURE_AD_CLIENT_ID }}
+         ARM_CLIENT_SECRET: ${{ secrets.AZURE_AD_CLIENT_SECRET }}
+         ARM_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+         ARM_TENANT_ID: ${{ secrets.AZURE_AD_TENANT_ID }}
        runs-on: ${{ matrix.os }}
        strategy:
            matrix:
             os: [ubuntu-latest]
-       env:
-         TF_TOKEN: 'pI01CGKJrT5nIw.atlasv1.tFDFUypt0B8UAXdBu4NWkxx9nFR5lIIkFZ5vZ6HCAIxjD66plNNB7M9GemXPMJlFjDQ'
+       
        steps:
         - name: Checkout
           uses: actions/checkout@v3
 
-        - name: Setup Terraform
-          uses: ./
+        - name: refrence action 
+          uses: ShivaKarki/terraform_action@v1
           with:
-            cli_config_credentials_token: ${{ env.TF_TOKEN }}
+                cli_config_credentials_token: ${{ secrets.TF_TOKEN }}
 
       
 
