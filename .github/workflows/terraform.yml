@@ -11,7 +11,7 @@ jobs:
       - name: reference terraform action
         uses: ShivaKarki/terraform_action@v1
         with:
-          cli_config_credentials_token: ${{ secrets.TF_TOKEN}}
+           TF_TOKEN: ${{ secrets.TF_TOKEN}}
       
 
 
