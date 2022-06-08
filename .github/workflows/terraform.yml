@@ -22,8 +22,7 @@ jobs:
 
         - name: refrence action 
           uses: ShivaKarki/action-terraform@v0
-          with:
-                cli_config_credentials_token: ${{ secrets.TF_TOKEN }}
+          
 
       
 
