@@ -5,7 +5,7 @@ terraform {
 
 
     workspaces {
-    name = "Githunb_Actions_demo"
+    name = "github_action_terraforn_cloud"
      }
    }
 }
