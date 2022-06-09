@@ -25,7 +25,7 @@ jobs:
          run:
           shell: bash
        
-        # Checkout the repository to the GitHub Actions Runner
+        # Checkout the repository to the GitHub Actions Runners
        steps:
         - name: Checkout
           uses: actions/checkout@v3
