@@ -19,7 +19,7 @@ jobs:
        strategy:
            matrix:
             os: [ubuntu-latest]
-            
+
        # Use the Bash shell regardless whether the GitHub Actions runner is ubuntu-latest, macos-latest, or windows-latest
        defaults:
          run:
@@ -30,7 +30,7 @@ jobs:
           uses: actions/checkout@v3
 
         - name: refrence action 
-          uses: ShivaKarki/action-terraform@v0.4
+          uses: ShivaKarki/action-terraform@v0.5
           with:
              TF_TOKEN: ${{secrets.TF_TOKEN }}
       
