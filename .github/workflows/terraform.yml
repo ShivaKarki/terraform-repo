@@ -14,7 +14,7 @@ jobs:
        env:
          ACTIONS_ALLOW_UNSECURE_COMMANDS: true
         # TF_TOKEN: 'pI01CGKJrT5nIw.atlasv1.tFDFUypt0B8UAXdBu4NWkxx9nFR5lIIkFZ5vZ6HCAIxjD66plNNB7M9GemXPMJlFjDQ'
-         ARM_APP_ID: ${{ secrets.AZURE_AD_CLIENT_ID }}
+         ARM_CLIENT_ID: ${{ secrets.AZURE_AD_CLIENT_ID }}
          ARM_CLIENT_SECRET: ${{ secrets.AZURE_AD_CLIENT_SECRET }}  
          ARM_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
          ARM_TENANT_ID: ${{ secrets.AZURE_AD_TENANT_ID }}
