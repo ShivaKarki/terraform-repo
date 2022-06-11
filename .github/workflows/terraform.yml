@@ -13,7 +13,11 @@ jobs:
        name: 'Terraform Cloud Credentials'
        env:
          ACTIONS_ALLOW_UNSECURE_COMMANDS: true
-         TF_TOKEN: 'pI01CGKJrT5nIw.atlasv1.tFDFUypt0B8UAXdBu4NWkxx9nFR5lIIkFZ5vZ6HCAIxjD66plNNB7M9GemXPMJlFjDQ'
+        # TF_TOKEN: 'pI01CGKJrT5nIw.atlasv1.tFDFUypt0B8UAXdBu4NWkxx9nFR5lIIkFZ5vZ6HCAIxjD66plNNB7M9GemXPMJlFjDQ'
+         ARM_CLIENT_ID: ${{ secrets.AZURE_AD_CLIENT_ID }}
+         ARM_CLIENT_SECRET: ${{ secrets.AZURE_AD_CLIENT_SECRET }}  
+         ARM_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+         ARM_TENANT_ID: ${{ secrets.AZURE_AD_TENANT_ID }}
          
        runs-on: ${{ matrix.os }}
        strategy:
@@ -31,9 +35,9 @@ jobs:
           uses: actions/checkout@v3
 
         - name: refrence action 
-          uses: ShivaKarki/action-terraform@v1.2
+          uses: ShivaKarki/action-terraform@v1.3
           with:
-             TF_TOKEN: ${{env.TF_TOKEN }}
+             TF_TOKEN: ${{secrets.TF_TOKEN }}
              ACTION_TOKEN: ${{secrets. ACTION_TOKEN }}
       
 
