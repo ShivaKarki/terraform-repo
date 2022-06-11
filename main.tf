@@ -10,13 +10,15 @@ terraform {
 }
 
 provider "azurerm" {
-   # skip provider rego because we are using a service principal with limited access to Azure
+  
+  # skip provider rego because we are using a service principal with limited access to Azure
   skip_provider_registration = "true"   
   
   subscription_id   = var.AZURE_AD_CLIENT_ID
-  tenant_id         = var.AZURE_AD_CLIENT_SECRET 
-  client_id         = var.AZURE_SUBSCRIPTION_ID 
-  client_secret     = var.AZURE_AD_TENANT_ID 
+  tesubscription_id   = "a54b6fd0-015e-4f77-a123-3ba3e93a64d8"
+	tenant_id         = "4569bf05-cab0-4330-93f8-4e8563c99907"
+	client_id         = "ea020ec2-a950-4418-a353-2d70a8aedd9e"
+	client_secret     = "bMu8Q~iGJv3x0MKFBr055qSme6LDlebzPCx2vb6o"
   
   features {}
   
